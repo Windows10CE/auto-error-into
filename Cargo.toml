@@ -1,0 +1,2 @@
+[workspace]
+members = ["auto-error-into", "auto-error-into-macro", "auto-error-into-tests"]
