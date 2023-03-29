@@ -2,6 +2,11 @@
 name = "auto-error-into-macro"
 version = "0.1.0"
 edition = "2021"
+authors = ["Aaron Robinson <aaronrobin1234@gmail.com>"]
+description = "Macro to automatically convert the Err variant of a Result to the Ok variant. Requires auto-error-into."
+repository = "https://github.com/Windows10CE/auto-error-into"
+license = "MIT"
+keywords = ["macros", "attribute", "result"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 

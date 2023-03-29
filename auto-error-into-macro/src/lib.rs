@@ -11,7 +11,7 @@ pub fn auto_error_into(args: TokenStream, input: TokenStream) -> TokenStream {
     let mut func = parse_macro_input!(input as ItemFn);
 
     let mut original_signature = func.sig.clone();
-    let ReturnType::Type(_, t) = func.sig.output else { panic!("Unable to use auto_error_convert on functions that return ()"); };
+    let ReturnType::Type(_, t) = func.sig.output else { panic!("Unable to use auto_error_into on functions that return ()"); };
 
     let block = func.block;
     func.sig.output = parse_quote!(-> <#t as ::auto_error_into::__::ResultResolver>::Ok);
