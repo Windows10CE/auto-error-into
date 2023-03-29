@@ -1,6 +1,6 @@
 [package]
 name = "auto-error-into"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 authors = ["Aaron Robinson <aaronrobin1234@gmail.com>"]
 description = "Macro to automatically convert the Err variant of a Result to the Ok variant."
@@ -11,4 +11,4 @@ keywords = ["macros", "attribute", "result"]
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-auto-error-into-macro = { version = "0.1.0", path = "../auto-error-into-macro"}
+auto-error-into-macro = { version = "0.1.1", path = "../auto-error-into-macro"}
