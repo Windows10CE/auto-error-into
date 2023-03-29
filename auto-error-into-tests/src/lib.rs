@@ -24,4 +24,12 @@ mod tests {
     fn test2_use() {
         let _: u32 = test2();
     }
+
+    #[auto_error_into(force_inline)]
+    extern "C" fn test3() -> Result<u32, u8> {
+        Err(45)
+    }
+    fn test3_use() {
+        let _: u32 = test3();
+    }
 }

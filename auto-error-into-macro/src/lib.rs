@@ -53,6 +53,7 @@ pub fn auto_error_into(args: TokenStream, input: TokenStream) -> TokenStream {
             func.sig.inputs = parse_quote!(#(#new_args),*);
 
             original_signature.ident = format_ident!("__internal_invoke");
+            original_signature.abi = None;
             func.block = Box::new(parse_quote!({
                 #[inline(always)] #original_signature #block
                 match __internal_invoke(#(#parameter_names),*) {
